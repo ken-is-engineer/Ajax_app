@@ -1,0 +1,8 @@
+<h1>ツイートしてね</h1>
+
+<%= form_with url: "/posts", method: :post, local: true do |unchiman| %>
+  <%= unchiman.text_field :content %>
+  <%= unchiman.submit '全世界に見せつけちゃって〜〜！'%>
+<% end %>
+
+<p> <%= link_to 'TL見ようかな〜〜', '/posts'%> </p>
