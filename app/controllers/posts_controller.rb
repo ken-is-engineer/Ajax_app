@@ -1,14 +1,10 @@
 class PostsController < ApplicationController
   def indexdayoday
-    @post = Post.find(2)
-    @posts = Post.all
+    @posts = Post.all.order(id: "DESC")
   end
 
   def addtweet
     Post.create(content: params[:content])
-  end
-
-  def newtweet
-    
+    redirect_to action: :index
   end
 end
